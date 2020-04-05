@@ -1,0 +1,23 @@
+一、确定开发目标
+1. 上传文件（TSV after ANNOVAR）
+2. 分析
+3. 成果的一个初步展示（summary)
+4. 分析成果的下载
+5. 登录 病人隐私保护
+6. 药物信息查询展示
+
+二、讨论技术
+1. Tomcat Servlet
+    JSP (html)
+    Cookie, Seesion
+    （4）
+2. JDBC (数据库数据处理)（1)
+4. [Login]
+
+三、确定开发时间线
+1. 两周 分析Demo 
+    Demo Code分Part
+2. 两周 开发5.1假期
+
+四、待定事宜
+1. 向老师确认DNA-Seq
