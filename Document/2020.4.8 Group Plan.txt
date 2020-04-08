@@ -1,0 +1,30 @@
+Group Plan for the next few weeks
+    Edited by Edison Jianning KANG in 4/8/2020
+
+-1 DNA-Seq Analysis (TSV)
+
+0. Git
+0.1 Git clone and Git branch of tracking the model codes to learn different techniques.
+0.2 Developing: Master (Only for releasing the formal version (v1.0, v2.0...))
+                Dev (For developing. After the formal version has been tested, it will be added to the Master branch.)   
+                Bug (For fixing bug when developing or releasing. Deleted after the bug fixed.)
+
+------------------------------------------------
+User Interface Layer, Following the Spring MVC structure
+1. Servlet (Controller & Model)
+   Session & Cookie
+   Filter
+
+2. JSP (JSTL) (View)
+------------------------------------------------
+Business Logic Layer
+------------------------------------------------
+Data Access Layer
+3. JDBC 
+
+4. SQL
+------------------------------------------------
+
+5. Junit (testing)
+
+6. Maven (Regulation)
