@@ -1,0 +1,16 @@
+I 确定开发目标
+1. 上传文件（TSV after ANNOVAR）
+2. ***分析
+3. 成果的一个初步展示（summary) 整理 跳转 方便用户查看 药物信息查询展示
+4. 分析成果的下载
+5. 病人隐私保护
+6. 中英文版本？
+
+II DNA-Seq？Somatic？Germline？
+
+III The requirements for the presentation of next week.
+
+IV Spring MVC 
+
+V 4.19 Requirement Analysis
+  4.20 Meeting for presentation and other issues like our cooperation.
