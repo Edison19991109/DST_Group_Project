@@ -1,0 +1,18 @@
+system information (static view)
+User upload vcf file in website and get a report.
+*Website has both Chinese and English versions.
+
+
+function (functional view)
+Users can upload vcf file and get a report of drug clinical guideline. 
+Website provides matched drug labels according to relevance.
+Users can download their report from website
+Users can search detailed information of drugs(pathway,annotation) 
+
+
+behavior (dynamic view)
+*database update
+
+
+
+* stands for optional
