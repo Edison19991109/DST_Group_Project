@@ -1,0 +1,20 @@
+1.Review uploaded requirements analysis
+Qile's requirements analysis ---- interface of website, research and clinical directions.
+Hongbing's requirements analysis ---- static, function and dynamic views.
+Zheng Xiao's requirements analysis ----functional requirements, client end and server end
+
+2.Discuss the format of requirements analysis documentation
+-introduction
+-description
+-interface requirements
+-functional requirements
+-non-functional requirements
+
+3.Prepare presentation and allocate tasks.
+
+
+4.Next meeting on 4/22
+
+
+
+ 
