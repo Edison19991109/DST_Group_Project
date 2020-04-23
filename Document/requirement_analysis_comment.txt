@@ -1,0 +1,10 @@
+user: doctors, researchers, students
+server: tomcat
+
+what are the expected audience? DEVELOPERS. how to develop? functionalities of system, standards their implitations should meet, key coders of system (?), interactions, automation of funtion to run the analysis, details of design.
+
+E.G. searching algorithm to match seq result (what developers should see the about the seq result? they have to talk to doctors, seq experts to implement their coding knowledge--程序员是主角)
+
+donot have to match the final system.
+
+try to build the high level of base model
