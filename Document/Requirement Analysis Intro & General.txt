@@ -1,0 +1,22 @@
+1 Introduction
+1.1 Purpose
+	Helping team members and other fellows understand better about task.
+1.2 Scope
+	The website that needs to be developed is called Medguide.
+	It is purposed by Pro. Xin Chen.
+	And it is developed by Group 3.
+1.3 Definition
+	VCF: Variant Call Format
+	ANNOVAR: A mutation caller
+
+2 General Description
+2.1 Aim
+	Developing a user-friendly mutation and drug searching website based on the data 	collecting from PharmGKB.
+2.2 User Characteristics
+	Main users include biomedical researchers and clinical doctors.
+	Potential users have little knowledge about computer coding and web service.
+	But have a found knowledge about biomedical, pharmacological or clinical fields.
+2.3 General Constraints
+	No funding
+	Time limit
+	Learn from the basic

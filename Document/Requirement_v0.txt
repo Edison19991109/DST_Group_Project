@@ -1,0 +1,40 @@
+Requirement:
+
+- Aim
+(the background & importance of this project)
+Precision medicine, which is an customized medical treatment based on individual omic data, has been more and more closer to reality in treating diseases like cancer and other genetic diseases. This website aims to excavate information of gene-related drugs based on PharmGKB, to provide precise guidelines for medical staff who have re-sequencing data of the patient.
+--------------------------------------------------------
+- Function requirement
+
+#1. What user can do; what are the restrictions
+From the local computer, upload .vcf file in the Upload page. See the summarized result in the result summary page.Filter by intested genes (consider additional user input SQL lines?). Look up detailed information of interested drugs by clicking on the hyperlink appending to each record. Download the summarized gene-drug matching table in .csv format, or detailed gene-drug-drug_info table in .xml format.
+
+#2. Client end (which pages)
+
+1)Upload page. It allows the user to upload the vcf file by clicking on the "Upload" button. If the file type cannot be recognized, throw out the exception "file must be in .vcf format".  
+
+2)Result summary page. Client is redirected to this page  after loading the vcf file. It returns the result of summary table from database (50 records each page), displaying gene id, drug id, drug label, dosing guideline, etc. (*) For each drug, create a hyperlink targeting to the drug info page. There are download options, allowing user to download the summary table in .csv format, or the total drug information in .xml format.
+#(OPTIONAL) Advanced filter: search for drugs targeting specific genes#
+
+3) Drug info page. Display the detailed drug information collected by PharmGKB.
+
+#3. Server end (which tables)
+
+sample table: auto_increment, datetime, text
+variant-drug table: match variant to the drug by id.
+drug info table: match drug id to other detailed info
+summary table:  gene id, drug id, drug label, dosing guideline, etc. (*)
+
+--------------------------------------------------------
+- Directory structure
+(need a diagram to illustrate)
+--------------------------------------------------------
+- Running & developing env
+see "Group Plan.txt"
+--------------------------------------------------------
+- Project organization
+Waterfall model
+Group assignment (DNA-seq, font-end, back-end, test, documentation)
+Git branches (dev, bug...)
+--------------------------------------------------------
+(*: should be reconsidered.)
