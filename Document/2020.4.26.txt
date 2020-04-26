@@ -1,0 +1,49 @@
+1. Software Designing
+    PAGE 1 Front 
+            -Introduction
+                -Brief Background Introduction 
+                -Function Introduction
+            -Filter
+                -Drug (ref)
+                -DrugLable Dosing Guideline (ref)
+                -...(ref)
+            -Search bar(Hint page) (A. Drug B. Others depends) (ref Drug)
+            -Input (ref)
+            -Help (A.Page&FAQ  B.PhramGKB)
+            -Reference
+            -Writers
+
+    PAGE 2 Input
+        1. (Choose Version before Uploading)
+        2. Exception Caught(A. In this page B.Ref)
+
+    PAGE 3 Filter
+        (Choose the filter criteria by pressing button)
+
+    PAGE 4 Help
+
+
+    PAGE 5 Output(ref from Input, analysis demo)
+            -Research Version
+            (Pathway, but no drugs)
+            -Clinical Version
+                -Summary
+                        -Order: 1. the number of SNPs(matched by the drug)
+                                2. SNPs search drug
+                                3. Evidence rate
+                        -Content
+                            -(Rank)
+                            -Drug(ref)
+                            -Genes
+                            -Variants
+                            -(Strength of Evidence Rate)
+                        -Filter
+                            -Drug
+            -Download
+        
+
+    PAGE 6 Drug
+        Content like filter.
+
+2. Next Meeting
+    2020/4/29
