@@ -2,6 +2,7 @@ package cn.edu.zju.dao;
 
 import cn.edu.zju.bean.Drug;
 import cn.edu.zju.bean.DrugLabel;
+import cn.edu.zju.bean.DrugLabelShow;
 import cn.edu.zju.dbutils.DBUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,25 +44,43 @@ public class DrugLabelDao extends BaseDao {
 
     }
 
-    public List<DrugLabel> findAll() {
-        List<DrugLabel> drugLabels = new ArrayList<>();
+    public List<DrugLabelShow> findAll() {
+        List<DrugLabelShow> drugLabels = new ArrayList<>();
         DBUtils.execSQL(connection -> {
             try {
-                PreparedStatement preparedStatement = connection.prepareStatement("select id, name, obj_cls, alternate_drug_available, dosing_information, prescribing_markdown, source, text_markdown, summary_markdown, raw, drug_id from drug_label");
+                PreparedStatement preparedStatement = connection.prepareStatement(
+                        "select drug.name\n" +
+                                "       Name,\n" +
+                                "       drug_label.Source,\n" +
+//                                "       `Biomarker Flag`,\n" +
+//                                "       `Testing Level`,\n" +
+                                "       alternate_drug_available,\n" +
+                                "       dosing_information,\n" +
+                                "       prescribing_markdown,\n" +
+//                                "       `Cancer Genome`,\n" +
+                                "        text_markdown,\n" +
+                                "       summary_markdown\n" +
+                                "from druglabels,drug_label,drug\n" +
+                                "    where drug_label.id = `PharmGKB ID`\n" +
+                                "    AND drug_id = drug.id;");
                 ResultSet resultSet = preparedStatement.executeQuery();
                 while (resultSet.next()) {
-                    String id = resultSet.getString("id");
-                    String name = resultSet.getString("name");
-                    String obj_cls = resultSet.getString("obj_cls");
+                    String drug_name = resultSet.getString("drug.name");
+                    String name = resultSet.getString("Name");
+                    String source = resultSet.getString("drug_label.Source");
+//                    String biomarker_flag = resultSet.getString("`Biomarker Flag`");
+                    String biomarker_flag ="";
+                    String testing_level = "";
+//                    String testing_level = resultSet.getString("`Testing Level`");
                     boolean alternate_drug_available = resultSet.getBoolean("alternate_drug_available");
                     boolean dosing_information = resultSet.getBoolean("dosing_information");
                     String prescribing_markdown = resultSet.getString("prescribing_markdown");
-                    String source = resultSet.getString("source");
+//                    String cancer_genome = resultSet.getString("`Cancer Genome`");
+                    String cancer_genome="";
                     String text_markdown = resultSet.getString("text_markdown");
                     String summary_markdown = resultSet.getString("summary_markdown");
-                    String raw = resultSet.getString("raw");
-                    String drug_id = resultSet.getString("drug_id");
-                    DrugLabel drugLabel = new DrugLabel(id, name, obj_cls, alternate_drug_available, dosing_information, prescribing_markdown, source, text_markdown, summary_markdown, raw, drug_id);
+                    DrugLabelShow drugLabel = new DrugLabelShow(drug_name, name, source,biomarker_flag,testing_level,
+                            alternate_drug_available, dosing_information, prescribing_markdown, cancer_genome, text_markdown, summary_markdown);
                     drugLabels.add(drugLabel);
                 }
             } catch (SQLException e) {

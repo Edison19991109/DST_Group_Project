@@ -47,9 +47,9 @@
 
 <div class="container-fluid">
     <div class="row">
-        <jsp:include page="nav.jsp" >
-            <jsp:param name="active" value="drug_labels" />
-        </jsp:include>
+<%--        <jsp:include page="nav.jsp" >--%>
+<%--            <jsp:param name="active" value="drug_labels" />--%>
+<%--        </jsp:include>--%>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -59,19 +59,33 @@
                 <table class="table table-striped table-sm">
                     <thead>
                     <tr>
-                        <th>#</th>
+                        <th>Drug Name</th>
+                        <th>Name</th>
                         <th>Source</th>
+                        <th>Biomarker Flag</th>
+                        <th>Testing Level</th>
+                        <th>Alternative Drug Available</th>
                         <th>Dosing Information</th>
+                        <th>Prescribing Markdown</th>
+                        <th>Cancer Genome</th>
+                        <th>Text Markdown</th>
                         <th>Summary Markdown</th>
                     </tr>
                     </thead>
                     <tbody>
                     <c:forEach items="${drugLabels}" var="item">
                         <tr>
-                            <td>${item.id}</td>
+                            <td>${item.drug_name}</td>
+                            <td>${item.name}</td>
                             <td>${item.source}</td>
-                            <td>${item.dosingInformation}</td>
-                            <td>${item.summaryMarkdown}</td>
+                            <td>${item.biomarker_flag}</td>
+                            <td>${item.testing_level}</td>
+                            <td>${item.has_alternate_drug}</td>
+                            <td>${item.has_dosing}</td>
+                            <td>${item.prescribing_markdown}</td>
+                            <td>${item.cancer_genome}</td>
+                            <td>${item.text_markdown}</td>
+                            <td>${item.summary_markdown}</td>
                         </tr>
                     </c:forEach>
 

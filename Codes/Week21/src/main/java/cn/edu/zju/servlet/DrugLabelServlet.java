@@ -1,6 +1,7 @@
 package cn.edu.zju.servlet;
 
 import cn.edu.zju.bean.DrugLabel;
+import cn.edu.zju.bean.DrugLabelShow;
 import cn.edu.zju.dao.DrugLabelDao;
 
 import javax.servlet.ServletException;
@@ -20,7 +21,7 @@ public class DrugLabelServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         DrugLabelDao drugLabelDao = new DrugLabelDao();
-        List<DrugLabel> all = drugLabelDao.findAll();
+        List<DrugLabelShow> all = drugLabelDao.findAll();
 
         request.setAttribute("drugLabels", all);
         request.getRequestDispatcher("/views/drug_labels.jsp").forward(request, response);
