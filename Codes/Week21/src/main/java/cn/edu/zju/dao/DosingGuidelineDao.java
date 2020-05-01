@@ -1,6 +1,7 @@
 package cn.edu.zju.dao;
 
 import cn.edu.zju.bean.DosingGuideline;
+import cn.edu.zju.bean.DosingGuidelineShow;
 import cn.edu.zju.bean.Drug;
 import cn.edu.zju.dbutils.DBUtils;
 import org.slf4j.Logger;
@@ -40,24 +41,27 @@ public class DosingGuidelineDao extends BaseDao {
         });
 
     }
-    public List<DosingGuideline> findAll() {
-        List<DosingGuideline> dosingGuidelines = new ArrayList<>();
+    public List<DosingGuidelineShow> findAll() {
+        List<DosingGuidelineShow> dosingGuidelines = new ArrayList<>();
         DBUtils.execSQL(connection -> {
             try {
-                PreparedStatement preparedStatement = connection.prepareStatement("select id,obj_cls,name,recommendation,drug_id,source,summary_markdown,text_markdown,raw from dosing_guideline");
+                PreparedStatement preparedStatement = connection.prepareStatement(
+                        "select drug.name,\n" +
+                        "       dosing_guideline.name,\n" +
+                        "       dosing_guideline.recommendation,\n" +
+                        "       dosing_guideline.source,\n" +
+                        "       dosing_guideline.summary_markdown\n" +
+                        "from drug,dosing_guideline\n" +
+                        "    where drug_id = drug.id;");
                 ResultSet resultSet = preparedStatement.executeQuery();
                 while (resultSet.next()) {
-                    String id = resultSet.getString("id");
-                    String objCls = resultSet.getString("obj_cls");
-                    String name = resultSet.getString("name");
+                    String drug_name = resultSet.getString("drug.name");
+                    String name = resultSet.getString("dosing_guideline.name");
                     boolean recommendation = resultSet.getBoolean("recommendation");
-                    String drugId = resultSet.getString("drug_id");
                     String source = resultSet.getString("source");
                     String summaryMarkdown = resultSet.getString("summary_markdown");
-                    String textMarkdown = resultSet.getString("text_markdown");
-                    String raw = resultSet.getString("raw");
-                    DosingGuideline dosingGuideline = new DosingGuideline(id, objCls, name, recommendation, drugId, source, summaryMarkdown, textMarkdown, raw);
-                    dosingGuidelines.add(dosingGuideline);
+                    DosingGuidelineShow dosingGuidelineShow = new DosingGuidelineShow(drug_name, name, recommendation, source, summaryMarkdown);
+                    dosingGuidelines.add(dosingGuidelineShow);
                 }
             } catch (SQLException e) {
                 log.info("", e);

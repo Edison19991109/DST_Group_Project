@@ -1,6 +1,7 @@
 package cn.edu.zju.servlet;
 
 import cn.edu.zju.bean.DosingGuideline;
+import cn.edu.zju.bean.DosingGuidelineShow;
 import cn.edu.zju.dao.DosingGuidelineDao;
 
 import javax.servlet.ServletException;
@@ -19,7 +20,7 @@ public class DosingGuidelineServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DosingGuidelineDao dosingGuidelineDao = new DosingGuidelineDao();
-        List<DosingGuideline> dosingGuidelines = dosingGuidelineDao.findAll();
+        List<DosingGuidelineShow> dosingGuidelines = dosingGuidelineDao.findAll();
         request.setAttribute("dosingGuidelines", dosingGuidelines);
         request.getRequestDispatcher("/views/dosing_guideline.jsp").forward(request, response);
     }

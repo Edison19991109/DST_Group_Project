@@ -44,10 +44,9 @@
                 <table class="table table-striped table-sm">
                     <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Name</th>
+                        <th>Drug Name</th>
+                        <th>Dosing Guideline Name</th>
                         <th>Recommendation</th>
-                        <th>Drug Id</th>
                         <th>Source</th>
                         <th>Summary Markdown</th>
                     </tr>
@@ -55,10 +54,9 @@
                     <tbody>
                     <c:forEach items="${dosingGuidelines}" var="item">
                         <tr>
-                            <td>${item.id}</td>
+                            <td>${item.drug_name}</td>
                             <td>${item.name}</td>
                             <td>${item.recommendation}</td>
-                            <td>${item.drugId}</td>
                             <td>${item.source}</td>
                             <td>${item.summaryMarkdown}</td>
                         </tr>
