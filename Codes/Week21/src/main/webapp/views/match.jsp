@@ -23,27 +23,56 @@
     <link href="<%=request.getContextPath()%>/static/bootstrap/css/bootstrap.css" rel="stylesheet">
     <script src="<%=request.getContextPath()%>/static/jquery/jquery-3.4.1.js"></script>
     <script src="<%=request.getContextPath()%>/static/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom styles for this template -->
-    <%--<link href="<%=request.getContextPath()%>/static/css/app.css" rel="stylesheet">--%>
+
+
 </head>
 <body>
-<jsp:include page="nav.jsp" />
-<%--<jsp:include page="head.jsp" />--%>
-
+<nav class="navbar">
+    <jsp:include page="nav.jsp" />
+</nav>
 <div class="container-fluid">
     <div class="row">
 
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4" style="margin-bottom: 400px;padding: 50px">
-            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
-                 style="color: #3b6d69">
-                <h2>Help</h2>
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h2>Matching Result</h2>
             </div>
             <div class="table-responsive">
-                Here is the help page
+                <div class="alert alert-info" role="alert">
+                    <h4 class="alert-heading">Sample Info #${sample.id}</h4>
+                    <div>Uploaded at: ${sample.createdAt}</div>
+                    <div>Uploaded by: ${sample.uploadedBy}</div>
+
+                </div>
+            </div>
+            <div class="table-responsive">
+                <h4>Matched Drug Labels</h4>
+                <c:if test="${!matched.isEmpty()}">
+                    <table class="table table-striped table-sm">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Source</th>
+                            <th>Summary</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <c:forEach items="${matched}" var="item" varStatus="loop">
+                            <tr>
+                                <td>${loop.index + 1}</td>
+                                <td>${item.name}</td>
+                                <td>${item.source}</td>
+                                <td>${item.summaryMarkdown}</td>
+                            </tr>
+                        </c:forEach>
+
+                        </tbody>
+                    </table>
+                </c:if>
             </div>
         </main>
     </div>
 </div>
 </body>
-
 </html>

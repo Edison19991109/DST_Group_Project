@@ -23,13 +23,13 @@
     <link href="<%=request.getContextPath()%>/static/bootstrap/css/bootstrap.css" rel="stylesheet">
     <script src="<%=request.getContextPath()%>/static/jquery/jquery-3.4.1.js"></script>
     <script src="<%=request.getContextPath()%>/static/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom styles for this template -->
-    <link href="<%=request.getContextPath()%>/static/css/app.css" rel="stylesheet">
+
 
 </head>
 <body>
-<jsp:include page="nav.jsp" />
-
+<nav class="navbar">
+    <jsp:include page="nav.jsp" />
+</nav>
 <div class="container-fluid">
     <div class="row">
         <%--<jsp:include page="nav.jsp" >

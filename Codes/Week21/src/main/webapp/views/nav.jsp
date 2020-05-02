@@ -18,15 +18,13 @@
             -moz-border-radius: 0;
             border-radius: 0;
         }
-        .whitesmoke{
-            color: #ffffff;
-        }
         .dropdown-toggle{
             color: #ffffff;
         }
 
     </style>
     <link href="<%=request.getContextPath()%>/static/css/nav.css" rel="stylesheet">
+
 </head>
 <body>
 <nav class="navbar navbar-fixed-top" role="navigation">
@@ -39,7 +37,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="${pageContext.request.contextPath}/" >Home</a>
+            <a class="navbar-brand" href="${pageContext.request.contextPath}/index" >Home</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
@@ -55,11 +53,11 @@
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu" >
-                        <li><a href="${pageContext.request.contextPath}/drugs"><div class="whitesmoke">Drug</div></a></li>
+                        <li><a href="${pageContext.request.contextPath}/drugs">Drug</a></li>
                         <li class="divider"></li>
-                        <li><a href="${pageContext.request.contextPath}/drugLabels"><div class="whitesmoke">DrugLabel</div></a></li>
+                        <li><a href="${pageContext.request.contextPath}/drugLabels">DrugLabel</a></li>
                         <li class="divider"></li>
-                        <li><a href="${pageContext.request.contextPath}/dosingGuideline"><div class="whitesmoke">DosingGuideline</div></a></li>
+                        <li><a href="${pageContext.request.contextPath}/dosingGuideline">DosingGuideline</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
