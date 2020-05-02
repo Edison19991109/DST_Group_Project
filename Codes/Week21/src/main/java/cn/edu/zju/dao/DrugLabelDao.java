@@ -52,12 +52,12 @@ public class DrugLabelDao extends BaseDao {
                         "select drug.name\n" +
                                 "       Name,\n" +
                                 "       drug_label.Source,\n" +
-//                                "       `Biomarker Flag`,\n" +
-//                                "       `Testing Level`,\n" +
+                                "       BiomarkerFlag,\n" +
+                                "       TestingLevel,\n" +
                                 "       alternate_drug_available,\n" +
                                 "       dosing_information,\n" +
                                 "       prescribing_markdown,\n" +
-//                                "       `Cancer Genome`,\n" +
+                                "       CancerGenome,\n" +
                                 "        text_markdown,\n" +
                                 "       summary_markdown\n" +
                                 "from druglabels,drug_label,drug\n" +
@@ -68,15 +68,15 @@ public class DrugLabelDao extends BaseDao {
                     String drug_name = resultSet.getString("drug.name");
                     String name = resultSet.getString("Name");
                     String source = resultSet.getString("drug_label.Source");
-//                    String biomarker_flag = resultSet.getString("`Biomarker Flag`");
-                    String biomarker_flag ="";
-                    String testing_level = "";
-//                    String testing_level = resultSet.getString("`Testing Level`");
+                    String biomarker_flag = resultSet.getString("BiomarkerFlag");
+//                    String biomarker_flag ="";
+//                    String testing_level = "";
+                    String testing_level = resultSet.getString("TestingLevel");
                     boolean alternate_drug_available = resultSet.getBoolean("alternate_drug_available");
                     boolean dosing_information = resultSet.getBoolean("dosing_information");
                     String prescribing_markdown = resultSet.getString("prescribing_markdown");
-//                    String cancer_genome = resultSet.getString("`Cancer Genome`");
-                    String cancer_genome="";
+                    String cancer_genome = resultSet.getString("CancerGenome");
+//                    String cancer_genome="";
                     String text_markdown = resultSet.getString("text_markdown");
                     String summary_markdown = resultSet.getString("summary_markdown");
                     DrugLabelShow drugLabel = new DrugLabelShow(drug_name, name, source,biomarker_flag,testing_level,
