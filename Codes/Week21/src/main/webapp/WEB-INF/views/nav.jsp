@@ -11,7 +11,6 @@
 
 
 <head>
-
     <style>
         .navbar-fixed-top .navbar-inner {
             -webkit-border-radius: 0;
@@ -21,13 +20,14 @@
         .dropdown-toggle{
             color: #ffffff;
         }
-
+        .dropdown-menu{
+            color: #ffffff;
+        }
     </style>
-    <link href="<%=request.getContextPath()%>/static/css/nav.css" rel="stylesheet">
-
+    <link href="<%=request.getContextPath()%>/static/css/navbar.css" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-fixed-top navbar-expand-sm" role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -53,11 +53,11 @@
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu" >
-                        <li><a href="${pageContext.request.contextPath}/drugs">Drug</a></li>
+                        <li><a class="nav-link" href="${pageContext.request.contextPath}/drugs">Drug</a></li>
                         <li class="divider"></li>
-                        <li><a href="${pageContext.request.contextPath}/drugLabels">DrugLabel</a></li>
+                        <li><a class="nav-link" href="${pageContext.request.contextPath}/drugLabels">DrugLabel</a></li>
                         <li class="divider"></li>
-                        <li><a href="${pageContext.request.contextPath}/dosingGuideline">DosingGuideline</a></li>
+                        <li><a class="nav-link" href="${pageContext.request.contextPath}/dosingGuideline">DosingGuideline</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -82,9 +82,6 @@
                         <a class="nav-link" href="${pageContext.request.contextPath}/signout" style="float: right">
                             <span class="glyphicon glyphicon-log-out"></span>
                             Sign out
-                        </a>
-                        <a class="nav-link" href="${pageContext.request.contextPath}/history" style="float: right">
-                            Hi, ${sessionScope.username} - History
                         </a>
                     </c:if>
                 </li>

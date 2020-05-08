@@ -24,6 +24,6 @@ public class DrugLabelServlet extends HttpServlet {
         List<DrugLabelShow> all = drugLabelDao.findAll();
 
         request.setAttribute("drugLabels", all);
-        request.getRequestDispatcher("/views/drug_labels.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/views/drug_labels.jsp").forward(request, response);
     }
 }

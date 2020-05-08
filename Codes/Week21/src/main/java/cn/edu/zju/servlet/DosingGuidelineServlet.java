@@ -22,6 +22,6 @@ public class DosingGuidelineServlet extends HttpServlet {
         DosingGuidelineDao dosingGuidelineDao = new DosingGuidelineDao();
         List<DosingGuidelineShow> dosingGuidelines = dosingGuidelineDao.findAll();
         request.setAttribute("dosingGuidelines", dosingGuidelines);
-        request.getRequestDispatcher("/views/dosing_guideline.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/views/dosing_guideline.jsp").forward(request, response);
     }
 }

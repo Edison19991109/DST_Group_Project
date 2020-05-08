@@ -23,6 +23,6 @@ public class IndexServlet extends HttpServlet {
         while (attributeNames.hasMoreElements()) {
             System.out.println(attributeNames.nextElement());
         }
-        request.getRequestDispatcher("/views/index.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/views/index.jsp").forward(request, response);
     }
 }

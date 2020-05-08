@@ -27,9 +27,7 @@
 
 </head>
 <body>
-<nav class="navbar">
-    <jsp:include page="nav.jsp" />
-</nav>
+<jsp:include page="nav.jsp" />
 <div class="container-fluid">
     <div class="row">
         <%--<jsp:include page="nav.jsp" >

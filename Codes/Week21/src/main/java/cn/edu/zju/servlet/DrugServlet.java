@@ -23,6 +23,6 @@ public class DrugServlet extends HttpServlet {
         List<Drug> all = drugDao.findAll();
 
         request.setAttribute("drugs", all);
-        request.getRequestDispatcher("/views/drugs.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/views/drugs.jsp").forward(request, response);
     }
 }

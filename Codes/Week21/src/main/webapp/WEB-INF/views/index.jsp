@@ -15,14 +15,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="generator" content="">
-    <title>Dashboard Template · Bootstrap</title>
+    <title>Precision Medicine Matching System</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<%=request.getContextPath()%>/static/bootstrap/css/bootstrap.css" rel="stylesheet">
     <script src="<%=request.getContextPath()%>/static/jquery/jquery-3.4.1.js"></script>
     <script src="<%=request.getContextPath()%>/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link href="<%=request.getContextPath()%>/static/css/navbar.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <%--<link href="<%=request.getContextPath()%>/static/css/app.css" rel="stylesheet">--%>
     <style>
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
@@ -32,9 +32,8 @@
     </style>
 </head>
 <body>
+<jsp:include page="head.jsp" />
 <jsp:include page="nav.jsp" />
-<%--<jsp:include page="head.jsp" />--%>
-
 <div class="container-fluid">
     <div class="row">
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4" style="margin-bottom: 400px;padding: 50px">
