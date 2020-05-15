@@ -1,6 +1,5 @@
 package cn.edu.zju.dao;
 
-import cn.edu.zju.bean.Drug;
 import cn.edu.zju.bean.DrugLabel;
 import cn.edu.zju.bean.DrugLabelShow;
 import cn.edu.zju.dbutils.DBUtils;
