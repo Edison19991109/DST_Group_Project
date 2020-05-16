@@ -1,5 +1,8 @@
 package cn.edu.zju.bean;
 
+import org.springframework.context.annotation.Bean;
+
+@Bean
 public class DrugLabelShow {
     private String drug_name;
     private String name;

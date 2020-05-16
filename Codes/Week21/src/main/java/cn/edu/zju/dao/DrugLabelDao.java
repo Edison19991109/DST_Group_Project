@@ -88,4 +88,22 @@ public class DrugLabelDao extends BaseDao {
         });
         return drugLabels;
     }
+
+    public void getDrugLabel(DrugLabel drugLabel) {
+        List
+        DBUtils.execSQL(connection -> {
+            try {
+                PreparedStatement preparedStatement = connection.prepareStatement("select * from drug_label where name = ？");
+                ResultSet r =preparedStatement.executeQuery();
+                while (r.next()){
+
+                }
+            } catch (SQLException e) {
+                log.info("", e);
+            }
+        });
+
+    }
+
+
 }

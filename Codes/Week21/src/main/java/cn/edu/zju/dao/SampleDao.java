@@ -2,6 +2,7 @@ package cn.edu.zju.dao;
 
 import cn.edu.zju.bean.Sample;
 import cn.edu.zju.dbutils.DBUtils;
+import org.springframework.stereotype.Component;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -9,7 +10,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
-
+@Component
 public class SampleDao extends BaseDao {
 
     public int save(String uploadedBy) {

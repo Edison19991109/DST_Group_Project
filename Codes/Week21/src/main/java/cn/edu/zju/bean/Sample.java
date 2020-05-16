@@ -1,5 +1,10 @@
 package cn.edu.zju.bean;
 
+import org.springframework.context.annotation.Bean;
+
+import java.util.Date;
+
+@Bean
 import java.util.Date;
 
 public class Sample {

@@ -1,5 +1,8 @@
 package cn.edu.zju.bean;
 
+import org.springframework.context.annotation.Bean;
+
+@Bean
 public class Drug {
 
     private String id;
