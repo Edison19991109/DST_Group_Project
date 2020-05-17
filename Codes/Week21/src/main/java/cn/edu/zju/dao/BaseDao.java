@@ -14,7 +14,7 @@ public abstract class BaseDao {
 
     private static final Logger log = LoggerFactory.getLogger(BaseDao.class);
 
-    public boolean existsById(String id, String tableName) {
+    public static boolean existsById(String id, String tableName) {
         AtomicBoolean exists = new AtomicBoolean(false);
         DBUtils.execSQL(connection -> {
             try {
