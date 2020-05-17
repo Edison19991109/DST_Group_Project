@@ -4,8 +4,8 @@ import org.springframework.context.annotation.Bean;
 
 import java.util.Date;
 
-@Bean
-import java.util.Date;
+/*@Bean
+import java.util.Date;*/
 
 public class Sample {
     private int id;

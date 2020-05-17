@@ -40,7 +40,6 @@ public class DrugLabelDao extends BaseDao {
                 log.info("", e);
             }
         });
-
     }
 
     public List<DrugLabelShow> findAll() {
@@ -89,7 +88,7 @@ public class DrugLabelDao extends BaseDao {
         return drugLabels;
     }
 
-    public void getDrugLabel(DrugLabel drugLabel) {
+    /*public void getDrugLabel(DrugLabel drugLabel) {
         List
         DBUtils.execSQL(connection -> {
             try {
@@ -103,7 +102,7 @@ public class DrugLabelDao extends BaseDao {
             }
         });
 
-    }
+    }*/
 
 
 }

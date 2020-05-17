@@ -1,10 +1,11 @@
 <%--
   Created by IntelliJ IDEA.
-  User: hello
-  Date: 2019-12-3
-  Time: 15:37
+  User: panho
+  Date: 2020/5/17
+  Time: 0:45
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page isELIgnored="false" %>
 <!doctype html>
@@ -32,10 +33,12 @@
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4" style="margin-bottom: 400px;padding: 50px">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
                  style="color: #3b6d69">
-                <h2>Home</h2>
+                <h2>Matching</h2>
             </div>
             <div class="table-responsive">
-                Welcome to use Precision Medicine Matching System
+                <c:if test="${validateError != null}">
+                    <div><c:out value="${validateError}"></c:out></div>
+                </c:if>
             </div>
         </main>
     </div>

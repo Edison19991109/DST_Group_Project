@@ -2,7 +2,7 @@ package cn.edu.zju.bean;
 
 import org.springframework.context.annotation.Bean;
 
-@Bean
+
 public class DrugShow {
     private String generic_names;
     private String trade_names;

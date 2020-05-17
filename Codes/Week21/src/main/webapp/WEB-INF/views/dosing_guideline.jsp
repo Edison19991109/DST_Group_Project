@@ -24,16 +24,12 @@
     <script src="<%=request.getContextPath()%>/static/jquery/jquery-3.4.1.js"></script>
     <script src="<%=request.getContextPath()%>/static/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-
 </head>
 <body>
+<jsp:include page="head.jsp" />
 <jsp:include page="nav.jsp" />
 <div class="container-fluid">
     <div class="row">
-        <%--<jsp:include page="nav.jsp" >
-            <jsp:param name="active" value="dosing_guideline" />
-        </jsp:include>--%>
-
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h2>Dosing Guidelines</h2>
@@ -59,7 +55,6 @@
                             <td>${item.summaryMarkdown}</td>
                         </tr>
                     </c:forEach>
-
                     </tbody>
                 </table>
             </div>
