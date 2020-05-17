@@ -11,6 +11,16 @@
 
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="generator" content="">
+
+    <link href="<%=request.getContextPath()%>/static/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <script src="<%=request.getContextPath()%>/static/jquery/jquery-3.4.1.js"></script>
+    <script src="<%=request.getContextPath()%>/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link href="<%=request.getContextPath()%>/static/css/navbar.css" rel="stylesheet">
     <style>
         .navbar-fixed-top .navbar-inner {
             -webkit-border-radius: 0;
@@ -24,7 +34,6 @@
             color: #ffffff;
         }
     </style>
-    <link href="<%=request.getContextPath()%>/static/css/navbar.css" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-fixed-top navbar-expand-sm" role="navigation">
