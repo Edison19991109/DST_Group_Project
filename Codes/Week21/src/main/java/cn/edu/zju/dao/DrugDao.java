@@ -16,6 +16,9 @@ public class DrugDao extends BaseDao {
 
     private static final Logger log = LoggerFactory.getLogger(DrugDao.class);
 
+    public DrugDao() {
+    }
+
     public boolean existsById(String id) {
         return super.existsById(id, "drug");
     }

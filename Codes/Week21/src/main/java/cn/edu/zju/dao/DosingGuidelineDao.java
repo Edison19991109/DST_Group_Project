@@ -18,6 +18,9 @@ public class DosingGuidelineDao extends BaseDao {
 
     private static final Logger log = LoggerFactory.getLogger(DosingGuidelineDao.class);
 
+    public DosingGuidelineDao() {
+    }
+
     public boolean existsById(String id) {
         return super.existsById(id, "dosing_guideline");
     }

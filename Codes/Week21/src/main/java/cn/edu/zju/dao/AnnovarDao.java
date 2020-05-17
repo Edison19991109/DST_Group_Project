@@ -16,6 +16,9 @@ public class AnnovarDao extends BaseDao {
 
     private Logger log = LoggerFactory.getLogger(AnnovarDao.class.getSimpleName());
 
+    public AnnovarDao() {
+    }
+
     public void save(int sampleId, String content) {
         String[] lines = content.split("\\r|\\n");
         DBUtils.execSQL(connection -> {

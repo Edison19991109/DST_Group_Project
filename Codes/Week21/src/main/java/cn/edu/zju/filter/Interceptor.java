@@ -1,6 +1,7 @@
 package cn.edu.zju.filter;
 
 import org.springframework.web.servlet.HandlerInterceptor;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,5 +18,15 @@ public class Interceptor implements HandlerInterceptor {
     //用户没有登录挑战到登录页面
     request.getRequestDispatcher("/WEB-INF/views/signin.jsp").forward(request, response);
     return false;
+    }
+
+    @Override
+    public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
+
+    }
+
+    @Override
+    public void afterCompletion(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception e) throws Exception {
+
     }
 }

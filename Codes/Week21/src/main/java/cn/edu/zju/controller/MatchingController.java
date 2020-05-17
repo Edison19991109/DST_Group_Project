@@ -75,7 +75,7 @@ public class MatchingController {
             return q;
         }
         List<DrugLabelShow> drugLabels = drugLabelDao.findAll();
-        List<DrugLabel> matched = doMatch(refGenes, drugLabels);
+        List<DrugLabelShow> matched = doMatch(refGenes, drugLabels);
 
         ModelAndView q = new ModelAndView();
         q.addObject("matched", matched);
@@ -86,12 +86,12 @@ public class MatchingController {
 
     }
 
-    private List<DrugLabel> doMatch(List<String> refGenes, List<DrugLabel> drugLabels) {
-        List<DrugLabel> matchedLabels = new ArrayList<>();
-        for (DrugLabel drugLabel : drugLabels) {
+    private List<DrugLabelShow> doMatch(List<String> refGenes, List<DrugLabelShow> drugLabels) {
+        List<DrugLabelShow> matchedLabels = new ArrayList<>();
+        for (DrugLabelShow drugLabel : drugLabels) {
             boolean matched = false;
             for (String gene : refGenes) {
-                if (drugLabel.getSummaryMarkdown().contains(gene)) {
+                if (drugLabel.getSummary_markdown().contains(gene)) {
                     matched = true;
                 }
             }

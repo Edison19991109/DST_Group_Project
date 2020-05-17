@@ -9,6 +9,7 @@
     http://www.springframework.org/schema/context/spring-context-3.0.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <context:component-scan base-package="cn.edu.zju.controller" />
+    <context:component-scan base-package="cn.edu.zju.dao" />
     <bean id="irViewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/views/" />

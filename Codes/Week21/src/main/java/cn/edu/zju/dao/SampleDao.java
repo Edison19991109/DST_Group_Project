@@ -13,6 +13,9 @@ import java.util.concurrent.atomic.AtomicReference;
 @Component
 public class SampleDao extends BaseDao {
 
+    public SampleDao() {
+    }
+
     public int save(String uploadedBy) {
         AtomicInteger key = new AtomicInteger();
         DBUtils.execSQL(connection -> {
