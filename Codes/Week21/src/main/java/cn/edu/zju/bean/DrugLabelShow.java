@@ -1,8 +1,9 @@
 package cn.edu.zju.bean;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 
-
+@Component
 public class DrugLabelShow {
     private String drug_name;
     private String name;
@@ -15,7 +16,9 @@ public class DrugLabelShow {
     private String cancer_genome;
     private String text_markdown;
     private String summary_markdown;
+    public DrugLabelShow(){
 
+    }
     public DrugLabelShow(String drug_name, String name, String source, String biomarker_flag, String testing_level, boolean has_alternate_drug, boolean has_dosing, String prescribing_markdown, String cancer_genome, String text_markdown, String summary_markdown) {
         this.drug_name = drug_name;
         this.name = name;
