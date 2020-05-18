@@ -36,23 +36,14 @@ public class DosingGuidelineControllerTest {
     @Autowired
     private DosingGuidelineController dosingGuidelineController;
 
-    @Before
-    public void setup() {
-
-
-
-      ///  this.mockMvc = MockMvcBuilders.webAppContextSetup(webAppContext).build();
-    }
     @Test
     public void handleRequest() throws Exception {
         MockHttpServletRequest request = new MockHttpServletRequest();
         request.setRequestURI("/dosingGuideline");
         MockHttpServletResponse response = new MockHttpServletResponse();
-       // mockMvc.perform(get("/highest-paid/2"))
-       ModelAndView mav = dosingGuidelineController.handleRequest(request,response);
-       assertViewName(mav,"dosing_guideline");
-       List<DosingGuidelineShow> expall = dosingGuidelineDao.findAll();
-       assertSortAndCompareListModelAttribute(mav,"dosing_guideline",expall,null);
+        ModelAndView mav = dosingGuidelineController.handleRequest(request,response);
+        assertViewName(mav,"dosing_guideline");
+        assertModelAttributeAvailable(mav,"dosingGuidelines");
 
     }
 }

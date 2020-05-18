@@ -16,6 +16,8 @@ public class DosingGuidelineDaoTest {
 
     @Test
     public void findAll() {
-        assertEquals(103,dosingGuidelineDao.findAll().size());
+
+        assertEquals(110,dosingGuidelineDao.findAll().size());
+      //  assertEquals(1,dosingGuidelineDao.findAll().size());
     }
 }

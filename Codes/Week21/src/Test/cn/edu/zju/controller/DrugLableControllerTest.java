@@ -48,13 +48,12 @@ public class DrugLableControllerTest {
     @Test
     public void handleRequest() throws Exception {
         MockHttpServletRequest request = new MockHttpServletRequest();
-        request.setRequestURI("/drugs");
+        request.setRequestURI("/drugLabels");
         MockHttpServletResponse response = new MockHttpServletResponse();
         // mockMvc.perform(get("/highest-paid/2"))
         ModelAndView mav = drugLableController.handleRequest(request,response);
-        assertViewName(mav,"dosing_guideline");
-        List<DrugLabelShow> expall = drugLabelDao.findAll();
-        assertSortAndCompareListModelAttribute(mav,"drugs",expall,null);
+        assertViewName(mav,"drug_labels");
+        assertModelAttributeAvailable(mav,"drugLabels");
 
     }
 }

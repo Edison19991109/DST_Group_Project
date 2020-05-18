@@ -51,11 +51,8 @@ public class DrugControllerTest {
         MockHttpServletRequest request = new MockHttpServletRequest();
         request.setRequestURI("/drugs");
         MockHttpServletResponse response = new MockHttpServletResponse();
-        // mockMvc.perform(get("/highest-paid/2"))
         ModelAndView mav = drugController.handleRequest(request,response);
-        assertViewName(mav,"dosing_guideline");
-        List<Drug> expall = drugDao.findAll();
-        assertSortAndCompareListModelAttribute(mav,"drugs",expall,null);
-
+        assertViewName(mav,"drugs");
+        assertModelAttributeAvailable(mav,"drugs");
     }
 }

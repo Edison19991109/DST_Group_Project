@@ -16,6 +16,7 @@ public class DrugDaoTest {
 
     @Test
     public void findAll() {
-        assertEquals(103,drugDao.findAll().size());
+        assertEquals(369,drugDao.findAll().size());
+        //assertEquals(103,drugDao.findAll().size());
     }
 }
