@@ -33,11 +33,11 @@ public class MatchingController {
     @Autowired
     private AnnovarDao annovarDao;
 
-    @RequestMapping(path = "/matchingIndex")
+    @RequestMapping(path = "/match")
 
     public ModelAndView matchingIndex() {
         ModelAndView a1 = new ModelAndView();
-        a1.setViewName("match");
+        a1.setViewName("matching_index");
         return a1;
     }
 
@@ -80,7 +80,7 @@ public class MatchingController {
         ModelAndView q = new ModelAndView();
         q.addObject("matched", matched);
         q.addObject("sample", sampleDao.findById(sampleId));
-        q.setViewName("matching_index_search");
+        q.setViewName("match");
 
         return q;
 
