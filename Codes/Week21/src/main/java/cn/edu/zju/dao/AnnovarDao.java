@@ -3,6 +3,7 @@ package cn.edu.zju.dao;
 import cn.edu.zju.dbutils.DBUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,10 +11,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringJoiner;
-
+@Component
 public class AnnovarDao extends BaseDao {
 
     private Logger log = LoggerFactory.getLogger(AnnovarDao.class.getSimpleName());
+
+    public AnnovarDao() {
+    }
 
     public void save(int sampleId, String content) {
         String[] lines = content.split("\\r|\\n");

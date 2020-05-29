@@ -1,5 +1,8 @@
 package cn.edu.zju.bean;
 
+import org.springframework.context.annotation.Bean;
+
+
 public class DosingGuideline {
 
     public DosingGuideline() {

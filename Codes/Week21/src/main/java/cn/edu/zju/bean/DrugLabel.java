@@ -1,5 +1,11 @@
 package cn.edu.zju.bean;
 
+import org.springframework.context.annotation.Bean;
+
+/*@Bean
+import org.springframework.stereotype.Component;*/
+
+
 public class DrugLabel {
 
     private String id;

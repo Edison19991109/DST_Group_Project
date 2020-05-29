@@ -4,16 +4,20 @@ import cn.edu.zju.bean.Drug;
 import cn.edu.zju.dbutils.DBUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
+@Component
 public class DrugDao extends BaseDao {
 
     private static final Logger log = LoggerFactory.getLogger(DrugDao.class);
+
+    public DrugDao() {
+    }
 
     public boolean existsById(String id) {
         return super.existsById(id, "drug");

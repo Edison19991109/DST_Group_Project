@@ -1,11 +1,17 @@
 package cn.edu.zju.bean;
 
+import org.springframework.context.annotation.Bean;
+
+
 public class DosingGuidelineShow {
     private String drug_name;
     private String name;
     private boolean recommendation;
     private String source;
     private String summaryMarkdown;
+
+    public DosingGuidelineShow() {
+    }
 
     public DosingGuidelineShow(String drug_name, String name, boolean recommendation, String source, String summaryMarkdown) {
         this.drug_name = drug_name;

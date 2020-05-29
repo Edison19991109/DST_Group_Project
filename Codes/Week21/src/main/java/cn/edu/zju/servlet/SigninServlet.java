@@ -23,14 +23,14 @@ public class SigninServlet extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute(AuthenticationFilter.ROLE_VIEW_DOSING_GUIDELINE, 1);
             session.setAttribute(AuthenticationFilter.USERNAME, USERNAME_1);
-            response.sendRedirect("index");
+            response.sendRedirect("WEB-INF/views/index.jsp");
         } else {
             request.setAttribute("error", "username or password error");
-            request.getRequestDispatcher("/views/signin.jsp").forward(request, response);
+            request.getRequestDispatcher("WEB-INF/views/signin.jsp").forward(request, response);
         }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/views/signin.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/views/signin.jsp").forward(request, response);
     }
 }

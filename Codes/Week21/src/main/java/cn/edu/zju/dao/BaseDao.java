@@ -3,17 +3,18 @@ package cn.edu.zju.dao;
 import cn.edu.zju.dbutils.DBUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.concurrent.atomic.AtomicBoolean;
-
+@Component
 public abstract class BaseDao {
 
     private static final Logger log = LoggerFactory.getLogger(BaseDao.class);
 
-    public boolean existsById(String id, String tableName) {
+    public static boolean existsById(String id, String tableName) {
         AtomicBoolean exists = new AtomicBoolean(false);
         DBUtils.execSQL(connection -> {
             try {

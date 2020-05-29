@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter(urlPatterns = {"/dosingGuideline", "/drugLabels"})
+@WebFilter(urlPatterns = {})
 public class AuthenticationFilter implements Filter {
 
     public static final String ROLE_VIEW_DOSING_GUIDELINE = "role_view_dosing_guideline";
