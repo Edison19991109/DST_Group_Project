@@ -15,7 +15,7 @@ public class Interceptor implements HandlerInterceptor {
     HttpSession session = request.getSession();
     //如果用户已登录也放行
     if(session.getAttribute("user")!=null){ return true; }
-    //用户没有登录挑战到登录页面
+    //用户没有登录跳转到登录页面
     request.getRequestDispatcher("/WEB-INF/views/signin.jsp").forward(request, response);
     return false;
     }

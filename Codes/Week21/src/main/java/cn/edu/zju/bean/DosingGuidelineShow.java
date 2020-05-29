@@ -10,6 +10,9 @@ public class DosingGuidelineShow {
     private String source;
     private String summaryMarkdown;
 
+    public DosingGuidelineShow() {
+    }
+
     public DosingGuidelineShow(String drug_name, String name, boolean recommendation, String source, String summaryMarkdown) {
         this.drug_name = drug_name;
         this.name = name;
